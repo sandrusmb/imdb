@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Container, Card, Grid, Typography, TextField, Button } from '@material-ui/core';
+import styles from "./styles";
 
 function Home() {
 
     const [searchText, setSearchText] = useState("");
+    const classes = styles();
 
     const handleSeachTextChange = (ev) => {
         setSearchText(ev.target.value);
@@ -20,21 +22,33 @@ function Home() {
 
     return (
         <div>
-            <Container>
-                <Card>
-                    <Grid container>
+            <Container className={classes.container}>
+                <Card className={classes.cardContainer}>
+                    <Grid container className={classes.titleGridContainer}>
                         <Grid>
-                            <Typography>Bienvenido</Typography>
+                            <Typography className={classes.title}>Bienvenido</Typography>
                         </Grid>
                         <Grid><label>Icono</label></Grid>
                     </Grid>
                     <TextField
                         value={searchText}
                         placeholder="Buscar..."
-                        onChange={handleSeachTextChange} />
-                    <Grid>
-                        <Button variant="contained" onClick={handleCleanTextClick}>Limpiar</Button>
-                        <Button variant="contained" color="primary" size="large" onClick={handleSeachTextClick}>Buscar</Button>
+                        onChange={handleSeachTextChange}
+                        className={classes.textFieldSearch} />
+                    <Grid className={classes.buttonsContainer}>
+                        <Button
+                            variant="contained"
+                            onClick={handleCleanTextClick}>
+                            Limpiar
+                        </Button>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            size="large"
+                            onClick={handleSeachTextClick}
+                            className={classes.searchButton}>
+                            Buscar
+                        </Button>
                     </Grid>
                 </Card>
             </Container>
