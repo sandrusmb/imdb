@@ -8,14 +8,12 @@ const centeredStyleObj = {
 
 export default makeStyles({
     container: {
-        border: "1px solid orange",
         height: "100vh",
         flexDirection: "column",
         ...centeredStyleObj
     },
 
     cardContainer: {
-        border: "1px solid pink",
         flexDirection: "column",
         ...centeredStyleObj,
         width: 400,
@@ -24,12 +22,10 @@ export default makeStyles({
     },
 
     title: {
-        border: "1px solid blue",
-        fontSize: "2rem"
+        fontSize: "4rem"
     },
 
     titleGridContainer: {
-        border: "1px solid red",
         ...centeredStyleObj
     },
 
@@ -43,6 +39,10 @@ export default makeStyles({
 
     buttonsContainer: {
         marginTop: "1.5rem"
+    },
+
+    movieIcon: {
+        fontSize: "4rem"
     }
 
 });

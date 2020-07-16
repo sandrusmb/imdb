@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Card, Grid, Typography, TextField, Button } from '@material-ui/core';
 import styles from "./styles";
+import { MovieIcon } from "../icons";
 
 function Home() {
 
@@ -28,7 +29,9 @@ function Home() {
                         <Grid>
                             <Typography className={classes.title}>Bienvenido</Typography>
                         </Grid>
-                        <Grid><label>Icono</label></Grid>
+                        <Grid>
+                            <MovieIcon className={classes.movieIcon}></MovieIcon>
+                        </Grid>
                     </Grid>
                     <TextField
                         value={searchText}
